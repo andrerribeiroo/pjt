@@ -1,31 +1,34 @@
 // src/App.jsx
 import React from 'react';
-import Header from './header/header';
-import Home from './home/home';
-import Footer from './footer/footer';
-import './App.css'
-
-
-
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './header/Header'; // Certifique-se de que o caminho está correto (observe as maiúsculas)
+import Home from './home/Home'; // Verifique o nome da pasta e do arquivo
+import ImageDetail from './image/imageDetail'; // O componente de detalhes
+import './App.css';
 
 function App() {
-    return (
-        <>
-            <Header/>
+  return (
+    <Router>
+      <>
+        <Header />
 
+        <div className="App">
 
-            <div className="App">
+          <h1>Galeria de Imagens</h1>
 
-            <h1>Galeria de Imagens</h1>
-            
-            <Home/>
+          {/* Configurando as rotas */}
+          
+          <Routes>
 
-            </div>
+            <Route path="/" element={<Home />} />
+            <Route path="/image/:id" element={<ImageDetail />} />
 
-            <Footer/>
-        </>
-    );
+          </Routes>
+
+        </div>
+      </>
+    </Router>
+  );
 }
 
 export default App;
