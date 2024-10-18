@@ -1,9 +1,18 @@
-// src/home/Home.jsx
+// src/home/HomeMisturado.jsx
 import React, { useState } from 'react';
-import './Home.css';
+import './HomeMisturado.css';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Home = () => {
+
+
+<nav>
+  <Link to="/">Home</Link>
+  <Link to="/home-misturado">Galeria Misturada</Link>
+  {/* Outros links */}
+</nav>
+
+const HomeMisturado = () => {
   const navigate = useNavigate();
 
   // Lista de imagens do tema Natureza
@@ -34,15 +43,15 @@ const Home = () => {
 
   // Lista de imagens do tema Animais
   const animaisImages = [
-    { id: 19, src: '/Animais.png', alt: 'Leão' },
-    { id: 20, src: '/Animais.png', alt: 'Tigre' },
-    { id: 21, src: '/Animais.png', alt: 'Elefante' },
-    { id: 22, src: '/Animais.png', alt: 'Girafa' },
-    { id: 23, src: '/Animais.png', alt: 'Zebra' },
-    { id: 24, src: '/Animais.png', alt: 'Urso' },
-    { id: 25, src: '/Animais.png', alt: 'Macaco' },
-    { id: 26, src: '/Animais.png', alt: 'Panda' },
-    { id: 27, src: '/Animais.png', alt: 'Raposa' },
+    { id: 19, src: '/Animais.png', alt: 'Animal 1' },
+    { id: 20, src: '/Animais.png', alt: 'Animal 2' },
+    { id: 21, src: '/Animais.png', alt: 'Animal 3' },
+    { id: 22, src: '/Animais.png', alt: 'Animal 4' },
+    { id: 23, src: '/Animais.png', alt: 'Animal 5' },
+    { id: 24, src: '/Animais.png', alt: 'Animal 6' },
+    { id: 25, src: '/Animais.png', alt: 'Animal 7' },
+    { id: 26, src: '/Animais.png', alt: 'Animal 8' },
+    { id: 27, src: '/Animais.png', alt: 'Animal 9' },
   ];
 
   // Lista de imagens do tema Roupa
@@ -58,17 +67,33 @@ const Home = () => {
     { id: 36, src: '/thugnine.png', alt: 'Roupa 9' },
   ];
 
+  // Combina todas as imagens (Natureza, Tecnologia, Animais e Roupa)
+  const allImages = [
+    ...naturezaImages,
+    ...tecnologiaImages,
+    ...animaisImages,
+    ...roupaImages,
+  ];
+
+  // Embaralha as imagens
+  const shuffleImages = (images) => {
+    for (let i = images.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [images[i], images[j]] = [images[j], images[i]];
+    }
+    return images;
+  };
+
+  const shuffledImages = shuffleImages([...allImages]); // Embaralha as imagens
+
   // Estado para controle de paginação
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
 
-  // Combina todas as imagens (Natureza, Tecnologia, Animais e Roupa)
-  const allImages = [...naturezaImages, ...tecnologiaImages, ...animaisImages, ...roupaImages];
-
   // Calcula o índice de início e fim das imagens da página atual
   const indexOfLastImage = currentPage * itemsPerPage;
   const indexOfFirstImage = indexOfLastImage - itemsPerPage;
-  const currentImages = allImages.slice(indexOfFirstImage, indexOfLastImage); // Imagens da página atual
+  const currentImages = shuffledImages.slice(indexOfFirstImage, indexOfLastImage); // Imagens da página atual
 
   // Manipula o clique na imagem
   const handleImageClick = (id) => {
@@ -77,7 +102,7 @@ const Home = () => {
 
   // Manipula navegação para a próxima página
   const handleNextPage = () => {
-    if (currentPage < Math.ceil(allImages.length / itemsPerPage)) {
+    if (currentPage < Math.ceil(shuffledImages.length / itemsPerPage)) {
       setCurrentPage(currentPage + 1);
     }
   };
@@ -90,8 +115,9 @@ const Home = () => {
   };
 
   return (
+    
     <div>
-      <h2>Galeria de Imagens</h2>
+      <h2>Galeria de Imagens Misturadas</h2>
       {/* Galeria de Imagens */}
       <div className="gallery">
         {currentImages.map((image) => (
@@ -110,8 +136,8 @@ const Home = () => {
         <button onClick={handlePrevPage} disabled={currentPage === 1}>
           Página Anterior
         </button>
-        <span>{`Página ${currentPage} de ${Math.ceil(allImages.length / itemsPerPage)}`}</span>
-        <button onClick={handleNextPage} disabled={currentPage === Math.ceil(allImages.length / itemsPerPage)}>
+        <span>{`Página ${currentPage} de ${Math.ceil(shuffledImages.length / itemsPerPage)}`}</span>
+        <button onClick={handleNextPage} disabled={currentPage === Math.ceil(shuffledImages.length / itemsPerPage)}>
           Próxima Página
         </button>
       </div>
@@ -119,4 +145,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeMisturado;

@@ -1,0 +1,23 @@
+/* src/roupa/Roupa.css */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery img {
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border-radius: 10px;
+}

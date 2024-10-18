@@ -1,3 +1,4 @@
+// src/header/Header.jsx
 import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
@@ -9,9 +10,10 @@ const Header = () => {
             <nav>
                 <ul>
                     <li><Link to="/">Home</Link></li> {/* Link para Home */}
-                    <li><Link to="naturezaImages">Natureza</Link></li> {/* Suponha que vai existir essa rota */}
-                    <li><Link to="/tecnologia">Tecnologia</Link></li> {/* Suponha que vai existir essa rota */}
-                    <li><Link to="/animais">Animais</Link></li> {/* Suponha que vai existir essa rota */}
+                    <li><Link to="/natureza">Natureza</Link></li> {/* Link para Natureza */}
+                    <li><Link to="/tecnologia">Tecnologia</Link></li> {/* Link para Tecnologia */}
+                    <li><Link to="/animais">Animais</Link></li> {/* Link para Animais */}
+                    <li><Link to="/roupa">Roupa</Link></li> {/* Link para Roupa */}
                 </ul>
             </nav>
         </header>
@@ -19,5 +21,3 @@ const Header = () => {
 };
 
 export default Header;
-
-

@@ -1,12 +1,12 @@
-.detail{
-    width: 100%;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    
+/* src/image/ImageDetail.css */
+
+.image-detail {
+    text-align: center;
+    margin: 20px;
 }
-.detail img{
-    border-radius: 5px;
-    border: 2px solid red;
-    
+
+.large-image {
+    max-width: 80%; /* Ajuste conforme necessário */
+    height: auto;
+    border-radius: 10px; /* Bordas arredondadas, opcional */
 }

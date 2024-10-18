@@ -4,6 +4,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './header/Header'; // Certifique-se de que o caminho está correto
 import Home from './home/Home'; // Verifique o nome da pasta e do arquivo
 import ImageDetail from './image/ImageDetail'; // O componente de detalhes
+import Natureza from './temas/Natureza'; // Componente Natureza
+import HomeMisturado from './temas/HomeMisturado'; // Importa o novo componente
+import Animais from './temas/Animais'; // Componente Animais
+import Tecnologia from './temas/Tecnologia'; // Componente Tecnologia
+import Roupa from './temas/Roupa';
 import './App.css';
 
 function App() {
@@ -14,12 +19,17 @@ function App() {
 
         {/* Título LOREM IPSUM no topo */}
         <h1 style={{ textAlign: 'center', marginTop: '20px' }}>LOREM IPSUM</h1>
-
+        
         <div className="App">
           {/* Configurando as rotas */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/image/:id" element={<ImageDetail />} />
+            <Route path="/natureza" element={<Natureza />} />
+            <Route path="/home-misturado" element={<HomeMisturado />} />
+            <Route path="/animais" element={<Animais />} />
+            <Route path="/tecnologia" element={<Tecnologia />} />
+            <Route path="/roupa" element={<Roupa />} /> {/* Nova rota para a categoria Roupa */}
           </Routes>
         </div>
       </>
