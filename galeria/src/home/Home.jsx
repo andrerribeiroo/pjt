@@ -4,37 +4,57 @@ import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const navigate = useNavigate();
-  
-  // Lista de imagens
-  const images = [
-    { id: 1, src: '/natural.png', alt: 'Imagem 1' },
-    { id: 2, src: '/natural.png', alt: 'Imagem 2' },
-    { id: 3, src: '/natural.png', alt: 'Imagem 3' },
-    { id: 4, src: '/natural.png', alt: 'Imagem 4' },
-    { id: 5, src: '/natural.png', alt: 'Imagem 5' },
-    { id: 6, src: '/natural.png', alt: 'Imagem 6' },
-    { id: 7, src: '/natural.png', alt: 'Imagem 7' },
-    { id: 8, src: '/natural.png', alt: 'Imagem 8' },
-    { id: 9, src: '/natural.png', alt: 'Imagem 9' },
-    { id: 10, src: '/natural.png', alt: 'Imagem 10' },
-    { id: 11, src: '/natural.png', alt: 'Imagem 11' },
-    { id: 12, src: '/natural.png', alt: 'Imagem 12' },
-    { id: 13, src: '/natural.png', alt: 'Imagem 13' },
-    { id: 14, src: '/natural.png', alt: 'Imagem 14' },
-    { id: 15, src: '/natural.png', alt: 'Imagem 15' },
-    { id: 16, src: '/natural.png', alt: 'Imagem 16' },
-    { id: 17, src: '/natural.png', alt: 'Imagem 17' },
-    { id: 18, src: '/natural.png', alt: 'Imagem 18' },
+
+  // Lista de imagens do tema Natureza
+  const naturezaImages = [
+    { id: 1, src: '/natural.png', alt: 'Natureza 1' },
+    { id: 2, src: '/natural.png', alt: 'Natureza 2' },
+    { id: 3, src: '/natural.png', alt: 'Natureza 3' },
+    { id: 4, src: '/natural.png', alt: 'Natureza 4' },
+    { id: 5, src: '/natural.png', alt: 'Natureza 5' },
+    { id: 6, src: '/natural.png', alt: 'Natureza 6' },
+    { id: 7, src: '/natural.png', alt: 'Natureza 7' },
+    { id: 8, src: '/natural.png', alt: 'Natureza 8' },
+    { id: 9, src: '/natural.png', alt: 'Natureza 9' },
+  ];
+
+  // Lista de imagens do tema Tecnologia
+  const tecnologiaImages = [
+    { id: 10, src: '/tecnologia.png', alt: 'Tecnologia 1' },
+    { id: 11, src: '/tecnologia.png', alt: 'Tecnologia 2' },
+    { id: 12, src: '/tecnologia.png', alt: 'Tecnologia 3' },
+    { id: 13, src: '/tecnologia.png', alt: 'Tecnologia 4' },
+    { id: 14, src: '/tecnologia.png', alt: 'Tecnologia 5' },
+    { id: 15, src: '/tecnologia.png', alt: 'Tecnologia 6' },
+    { id: 16, src: '/tecnologia.png', alt: 'Tecnologia 7' },
+    { id: 17, src: '/tecnologia.png', alt: 'Tecnologia 8' },
+    { id: 18, src: '/tecnologia.png', alt: 'Tecnologia 9' },
+  ];
+
+  // Lista de imagens do tema Animais
+  const animaisImages = [
+    { id: 19, src: '/Animais.png', alt: 'Leão' },
+    { id: 20, src: '/Animais.png', alt: 'Tigre' },
+    { id: 21, src: '/Animais.png', alt: 'Elefante' },
+    { id: 22, src: '/Animais.png', alt: 'Girafa' },
+    { id: 23, src: '/Animais.png', alt: 'Zebra' },
+    { id: 24, src: '/Animais.png', alt: 'Urso' },
+    { id: 25, src: '/Animais.png', alt: 'Macaco' },
+    { id: 26, src: '/Animais.png', alt: 'Panda' },
+    { id: 27, src: '/Animais.png', alt: 'Raposa' },
   ];
 
   // Estado para controle de paginação
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 9; // 9 imagens por página (3x3 grid)
+  const itemsPerPage = 9;
+
+  // Combina todas as imagens (primeiro Natureza, depois Tecnologia, depois Animais)
+  const allImages = [...naturezaImages, ...tecnologiaImages, ...animaisImages];
 
   // Calcula o índice de início e fim das imagens da página atual
   const indexOfLastImage = currentPage * itemsPerPage;
   const indexOfFirstImage = indexOfLastImage - itemsPerPage;
-  const currentImages = images.slice(indexOfFirstImage, indexOfLastImage); // Imagens da página atual
+  const currentImages = allImages.slice(indexOfFirstImage, indexOfLastImage); // Imagens da página atual
 
   // Manipula o clique na imagem
   const handleImageClick = (id) => {
@@ -43,7 +63,7 @@ const Home = () => {
 
   // Manipula navegação para a próxima página
   const handleNextPage = () => {
-    if (currentPage < Math.ceil(images.length / itemsPerPage)) {
+    if (currentPage < Math.ceil(allImages.length / itemsPerPage)) {
       setCurrentPage(currentPage + 1);
     }
   };
@@ -57,6 +77,7 @@ const Home = () => {
 
   return (
     <div>
+      {/* Galeria de Imagens */}
       <div className="gallery">
         {currentImages.map((image) => (
           <div
@@ -69,13 +90,13 @@ const Home = () => {
         ))}
       </div>
 
-      {/* Botões de navegação */}
+      {/* Botões de paginação */}
       <div className="pagination">
         <button onClick={handlePrevPage} disabled={currentPage === 1}>
           Página Anterior
         </button>
-        <span>{`Página ${currentPage} de ${Math.ceil(images.length / itemsPerPage)}`}</span>
-        <button onClick={handleNextPage} disabled={currentPage === Math.ceil(images.length / itemsPerPage)}>
+        <span>{`Página ${currentPage} de ${Math.ceil(allImages.length / itemsPerPage)}`}</span>
+        <button onClick={handleNextPage} disabled={currentPage === Math.ceil(allImages.length / itemsPerPage)}>
           Próxima Página
         </button>
       </div>
