@@ -8,6 +8,7 @@ import Natureza from './temas/Natureza'; // Componente Natureza
 import Animais from './temas/Animais'; // Componente Animais
 import Tecnologia from './temas/Tecnologia'; // Componente Tecnologia
 import Roupa from './temas/Roupa';
+import Hardware from './temas/Hardware';
 import './App.css';
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
             <Route path="/natureza" element={<Natureza />} />
             <Route path="/animais" element={<Animais />} />
             <Route path="/tecnologia" element={<Tecnologia />} />
-            <Route path="/roupa" element={<Roupa />} /> {/* Nova rota para a categoria Roupa */}
+            <Route path="/roupa" element={<Roupa />} />
+            <Route path="/hardware" element={<Hardware />} />
           </Routes>
         </div>
       </>

@@ -14,6 +14,7 @@ const Header = () => {
                     <li><Link to="/tecnologia">Tecnologia</Link></li> {/* Link para Tecnologia */}
                     <li><Link to="/animais">Animais</Link></li> {/* Link para Animais */}
                     <li><Link to="/roupa">Roupa</Link></li> {/* Link para Roupa */}
+                    <li><Link to="/hardware">Hardware</Link></li> {/* Link para Hardware - Nova categoria */}
                 </ul>
             </nav>
         </header>
