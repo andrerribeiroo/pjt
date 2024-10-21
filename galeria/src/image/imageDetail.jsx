@@ -41,6 +41,15 @@ const imageDetails = {
     34: { title: "Roupa 7", description: "Descrição da imagem Roupa 7", src: "/thugnine.png" },
     35: { title: "Roupa 8", description: "Descrição da imagem Roupa 8", src: "/thugnine.png" },
     36: { title: "Roupa 9", description: "Descrição da imagem Roupa 9", src: "/thugnine.png" },
+    37: { title: "Placa 1", description: "Descrição da Placa 1", src: "/4060.png" },
+    38: { title: "Placa 2", description: "Descrição da Placa 2", src: "/4060.png" },
+    39: { title: "Placa 3", description: "Descrição da Placa 3", src: "/4060.png" },
+    40: { title: "Placa 4", description: "Descrição da Placa 4", src: "/4060.png" },
+    41: { title: "Placa 5", description: "Descrição da Placa 5", src: "/4060.png" },
+    42: { title: "Placa 6", description: "Descrição da Placa 6", src: "/4060.png" },
+    43: { title: "Placa 7", description: "Descrição da Placa 7", src: "/4060.png" },
+    44: { title: "Placa 8", description: "Descrição da Placa 8", src: "/4060.png" },
+    45: { title: "Placa 9", description: "Descrição da Placa 9", src: "/4060.png" },
 };
 
 const ImageDetail = () => {

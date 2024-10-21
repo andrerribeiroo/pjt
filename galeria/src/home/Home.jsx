@@ -58,12 +58,25 @@ const Home = () => {
     { id: 36, src: '/thugnine.png', alt: 'Roupa 9' },
   ];
 
+  // Nova lista de 9 imagens
+  const novasImages = [
+    { id: 37, src: '4060.png', alt: 'Nova Imagem 1' },
+    { id: 38, src: '4060.png', alt: 'Nova Imagem 2' },
+    { id: 39, src: '4060.png', alt: 'Nova Imagem 3' },
+    { id: 40, src: '4060.png', alt: 'Nova Imagem 4' },
+    { id: 41, src: '4060.png', alt: 'Nova Imagem 5' },
+    { id: 42, src: '4060.png', alt: 'Nova Imagem 6' },
+    { id: 43, src: '4060.png', alt: 'Nova Imagem 7' },
+    { id: 44, src: '4060.png', alt: 'Nova Imagem 8' },
+    { id: 45, src: '4060.png', alt: 'Nova Imagem 9' },
+  ];
+
   // Estado para controle de paginação
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
 
-  // Combina todas as imagens (Natureza, Tecnologia, Animais e Roupa)
-  const allImages = [...naturezaImages, ...tecnologiaImages, ...animaisImages, ...roupaImages];
+  // Combina todas as imagens (Natureza, Tecnologia, Animais, Roupa e Novas)
+  const allImages = [...naturezaImages, ...tecnologiaImages, ...animaisImages, ...roupaImages, ...novasImages];
 
   // Calcula o índice de início e fim das imagens da página atual
   const indexOfLastImage = currentPage * itemsPerPage;
