@@ -9,14 +9,14 @@ const Roupa = () => {
   // Lista de imagens do tema Roupa
   const roupaImages = [
     { id: 28, src: '/thugnine.png', alt: 'Roupa 1' },
-    { id: 29, src: '/thugnine.png', alt: 'Roupa 2' },
-    { id: 30, src: '/thugnine.png', alt: 'Roupa 3' },
-    { id: 31, src: '/thugnine.png', alt: 'Roupa 4' },
-    { id: 32, src: '/thugnine.png', alt: 'Roupa 5' },
-    { id: 33, src: '/thugnine.png', alt: 'Roupa 6' },
-    { id: 34, src: '/thugnine.png', alt: 'Roupa 7' },
-    { id: 35, src: '/thugnine.png', alt: 'Roupa 8' },
-    { id: 36, src: '/thugnine.png', alt: 'Roupa 9' },
+    { id: 29, src: '/thugnine2.png', alt: 'Roupa 2' },
+    { id: 30, src: '/thugnine3.png', alt: 'Roupa 3' },
+    { id: 31, src: '/thugnine4.png', alt: 'Roupa 4' },
+    { id: 32, src: '/thugnine5.png', alt: 'Roupa 5' },
+    { id: 33, src: '/thugnine6.png', alt: 'Roupa 6' },
+    { id: 34, src: '/thugnine7.png', alt: 'Roupa 7' },
+    { id: 35, src: '/thugnine8.png', alt: 'Roupa 8' },
+    { id: 36, src: '/thugnine9.png', alt: 'Roupa 9' },
   ];
 
   // Manipula o clique na imagem

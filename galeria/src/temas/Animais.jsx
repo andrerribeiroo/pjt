@@ -9,14 +9,14 @@ const Animais = () => {
   // Lista de imagens do tema Animais
   const animaisImages = [
     { id: 19, src: '/Animais.png', alt: 'Leão' },
-    { id: 20, src: '/Animais.png', alt: 'Tigre' },
-    { id: 21, src: '/Animais.png', alt: 'Elefante' },
-    { id: 22, src: '/Animais.png', alt: 'Girafa' },
-    { id: 23, src: '/Animais.png', alt: 'Zebra' },
-    { id: 24, src: '/Animais.png', alt: 'Urso' },
-    { id: 25, src: '/Animais.png', alt: 'Macaco' },
-    { id: 26, src: '/Animais.png', alt: 'Panda' },
-    { id: 27, src: '/Animais.png', alt: 'Raposa' },
+    { id: 20, src: '/Animais2.png', alt: 'Tigre' },
+    { id: 21, src: '/Animais3.png', alt: 'Elefante' },
+    { id: 22, src: '/Animais4.png', alt: 'Girafa' },
+    { id: 23, src: '/Animais5.png', alt: 'Zebra' },
+    { id: 24, src: '/Animais6.png', alt: 'Urso' },
+    { id: 25, src: '/Animais7.png', alt: 'Macaco' },
+    { id: 26, src: '/Animais8.png', alt: 'Panda' },
+    { id: 27, src: '/Animais9.png', alt: 'Raposa' },
   ];
 
   // Manipula o clique na imagem

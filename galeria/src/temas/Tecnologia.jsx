@@ -9,14 +9,14 @@ const Tecnologia = () => {
   // Lista de imagens do tema Tecnologia
   const tecnologiaImages = [
     { id: 10, src: '/tecnologia.png', alt: 'Tecnologia 1' },
-    { id: 11, src: '/tecnologia.png', alt: 'Tecnologia 2' },
-    { id: 12, src: '/tecnologia.png', alt: 'Tecnologia 3' },
-    { id: 13, src: '/tecnologia.png', alt: 'Tecnologia 4' },
-    { id: 14, src: '/tecnologia.png', alt: 'Tecnologia 5' },
-    { id: 15, src: '/tecnologia.png', alt: 'Tecnologia 6' },
-    { id: 16, src: '/tecnologia.png', alt: 'Tecnologia 7' },
-    { id: 17, src: '/tecnologia.png', alt: 'Tecnologia 8' },
-    { id: 18, src: '/tecnologia.png', alt: 'Tecnologia 9' },
+    { id: 11, src: '/tecnologia2.png', alt: 'Tecnologia 2' },
+    { id: 12, src: '/tecnologia3.png', alt: 'Tecnologia 3' },
+    { id: 13, src: '/tecnologia4.png', alt: 'Tecnologia 4' },
+    { id: 14, src: '/tecnologia5.png', alt: 'Tecnologia 5' },
+    { id: 15, src: '/tecnologia6.png', alt: 'Tecnologia 6' },
+    { id: 16, src: '/tecnologia7.png', alt: 'Tecnologia 7' },
+    { id: 17, src: '/tecnologia8.png', alt: 'Tecnologia 8' },
+    { id: 18, src: '/tecnologia9.png', alt: 'Tecnologia 9' },
   ];
 
   // Manipula o clique na imagem
