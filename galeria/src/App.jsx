@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './header/Header'; // Certifique-se de que o caminho está correto
 import Home from './home/Home'; // Verifique o nome da pasta e do arquivo
-import ImageDetail from './image/ImageDetail'; // O componente de detalhes
+import ImageDetail from './image/imageDetail'; // O componente de detalhes
 import Natureza from './temas/Natureza'; // Componente Natureza
 import Animais from './temas/Animais'; // Componente Animais
 import Tecnologia from './temas/Tecnologia'; // Componente Tecnologia
