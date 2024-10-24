@@ -1,5 +1,8 @@
 /* src/roupa/Roupa.css */
 
+h1{
+    display: none;
+}
 .gallery {
     display: flex;
     flex-wrap: wrap;

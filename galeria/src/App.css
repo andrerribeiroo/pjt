@@ -33,12 +33,7 @@ h1 {
   justify-content: center;
 }
 
-.gallery-item {
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+
 
 .gallery-item img {
   width: 100%;
@@ -46,10 +41,7 @@ h1 {
   display: block;
 }
 
-.gallery-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+
 
 /* Paginação */
 .pagination {

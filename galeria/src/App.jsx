@@ -18,7 +18,7 @@ function App() {
         <Header />
 
         {/* Título LOREM IPSUM no topo */}
-        <h1 style={{ textAlign: 'center', marginTop: '20px' }}>LOREM IPSUM</h1>
+        <h1 style={{ textAlign: 'center', marginTop: '10px' }}>LOREM IPSUM</h1>
         
         <div className="App">
           {/* Configurando as rotas */}
